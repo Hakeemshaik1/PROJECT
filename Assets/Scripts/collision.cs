@@ -5,14 +5,14 @@ using UnityEngine;
 public class collision : MonoBehaviour
 {
     public GameObject Player;
-    public GameObject charmodel;
+    public GameObject Charactermodel;
     public GameObject levelControl;
 
    private void OnTriggerEnter(Collider other)
     {
         this.gameObject.GetComponent<BoxCollider>().enabled = false;
         Player.GetComponent<PlayerMove>().enabled = false;
-        charmodel.GetComponent<Animator>().Play("Stumble Backwards");
+        Charactermodel.GetComponent<Animator>().Play("Stumble Backwards");
         levelControl.GetComponent<Score>().enabled = false;
         levelControl.GetComponent<endrunsequance>().enabled = true;
 

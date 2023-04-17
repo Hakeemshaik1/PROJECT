@@ -24,6 +24,11 @@ public class destroyer : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (parentName == "startsection")
+        {
+            Destroy(gameObject);
+        }
+        
 
     }
 }

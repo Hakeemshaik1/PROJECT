@@ -23,7 +23,7 @@ public class GenerateLevel : MonoBehaviour
         secNum = Random.Range(0, 2);
         Instantiate(section[secNum], new Vector3(0, 0, Zposition), Quaternion.identity);
         Zposition += 40;
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(10);
         CreateSection = false;
     }
 }

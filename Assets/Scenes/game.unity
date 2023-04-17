@@ -321,13 +321,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  charmodel: {fileID: 0}
+  Charactermodel: {fileID: 0}
   levelControl: {fileID: 0}
 --- !u!1 &403055052 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8130742594652599979, guid: 99abd0e13c22c4254b30a2b6af063834, type: 3}
   m_PrefabInstance: {fileID: 6620052205426302649}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &403055053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403055052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414d7a9745b814121a0f439aae829d61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentName: 
 --- !u!1 &520671545
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,7 +866,7 @@ MonoBehaviour:
   ScoreDisplay: {fileID: 50232875}
   EndScoreDisplay: {fileID: 1359667373}
   Distance: 0
-  addingDistance: 0
+  addDistance: 0
 --- !u!114 &704979580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2605,6 +2618,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 455628180930260298, guid: 99abd0e13c22c4254b30a2b6af063834, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.242
+      objectReference: {fileID: 0}
     - target: {fileID: 2149504640701020715, guid: 99abd0e13c22c4254b30a2b6af063834, type: 3}
       propertyPath: Player
       value: 
@@ -2617,6 +2634,10 @@ PrefabInstance:
       propertyPath: levelControl
       value: 
       objectReference: {fileID: 704979577}
+    - target: {fileID: 2149504640701020715, guid: 99abd0e13c22c4254b30a2b6af063834, type: 3}
+      propertyPath: Charactermodel
+      value: 
+      objectReference: {fileID: 538194520}
     - target: {fileID: 6420462346195264611, guid: 99abd0e13c22c4254b30a2b6af063834, type: 3}
       propertyPath: Player
       value: 
@@ -2629,6 +2650,10 @@ PrefabInstance:
       propertyPath: levelControl
       value: 
       objectReference: {fileID: 704979577}
+    - target: {fileID: 6420462346195264611, guid: 99abd0e13c22c4254b30a2b6af063834, type: 3}
+      propertyPath: Charactermodel
+      value: 
+      objectReference: {fileID: 538194520}
     - target: {fileID: 6559791438521161885, guid: 99abd0e13c22c4254b30a2b6af063834, type: 3}
       propertyPath: Player
       value: 
@@ -2641,6 +2666,10 @@ PrefabInstance:
       propertyPath: levelControl
       value: 
       objectReference: {fileID: 704979577}
+    - target: {fileID: 6559791438521161885, guid: 99abd0e13c22c4254b30a2b6af063834, type: 3}
+      propertyPath: Charactermodel
+      value: 
+      objectReference: {fileID: 538194520}
     - target: {fileID: 8130742594652599979, guid: 99abd0e13c22c4254b30a2b6af063834, type: 3}
       propertyPath: m_Name
       value: SECTION 2
@@ -2701,10 +2730,17 @@ PrefabInstance:
       propertyPath: levelControl
       value: 
       objectReference: {fileID: 704979577}
+    - target: {fileID: 8920104941745617554, guid: 99abd0e13c22c4254b30a2b6af063834, type: 3}
+      propertyPath: Charactermodel
+      value: 
+      objectReference: {fileID: 538194520}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8130742594652599979, guid: 99abd0e13c22c4254b30a2b6af063834, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 403055053}
   m_SourcePrefab: {fileID: 100100000, guid: 99abd0e13c22c4254b30a2b6af063834, type: 3}
 --- !u!1001 &7088043999718155739
 PrefabInstance:
@@ -2726,6 +2762,10 @@ PrefabInstance:
       propertyPath: levelControl
       value: 
       objectReference: {fileID: 704979577}
+    - target: {fileID: 1047865087885879971, guid: 2b41cd5180bf74b0ba05991b450f87e2, type: 3}
+      propertyPath: Charactermodel
+      value: 
+      objectReference: {fileID: 538194520}
     - target: {fileID: 2672334920977008276, guid: 2b41cd5180bf74b0ba05991b450f87e2, type: 3}
       propertyPath: Player
       value: 
@@ -2738,6 +2778,10 @@ PrefabInstance:
       propertyPath: levelControl
       value: 
       objectReference: {fileID: 704979577}
+    - target: {fileID: 2672334920977008276, guid: 2b41cd5180bf74b0ba05991b450f87e2, type: 3}
+      propertyPath: Charactermodel
+      value: 
+      objectReference: {fileID: 538194520}
     - target: {fileID: 3312609214832041292, guid: 2b41cd5180bf74b0ba05991b450f87e2, type: 3}
       propertyPath: Player
       value: 
@@ -2750,9 +2794,13 @@ PrefabInstance:
       propertyPath: levelControl
       value: 
       objectReference: {fileID: 704979577}
+    - target: {fileID: 3312609214832041292, guid: 2b41cd5180bf74b0ba05991b450f87e2, type: 3}
+      propertyPath: Charactermodel
+      value: 
+      objectReference: {fileID: 538194520}
     - target: {fileID: 6343310595622725959, guid: 2b41cd5180bf74b0ba05991b450f87e2, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6343310595622725959, guid: 2b41cd5180bf74b0ba05991b450f87e2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2810,16 +2858,36 @@ PrefabInstance:
       propertyPath: levelControl
       value: 
       objectReference: {fileID: 704979577}
+    - target: {fileID: 8969738115740193254, guid: 2b41cd5180bf74b0ba05991b450f87e2, type: 3}
+      propertyPath: Charactermodel
+      value: 
+      objectReference: {fileID: 538194520}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6504862672872784411, guid: 2b41cd5180bf74b0ba05991b450f87e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7088043999718155741}
   m_SourcePrefab: {fileID: 100100000, guid: 2b41cd5180bf74b0ba05991b450f87e2, type: 3}
 --- !u!1 &7088043999718155740 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6504862672872784411, guid: 2b41cd5180bf74b0ba05991b450f87e2, type: 3}
   m_PrefabInstance: {fileID: 7088043999718155739}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7088043999718155741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7088043999718155740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414d7a9745b814121a0f439aae829d61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentName: 
 --- !u!1001 &7212714706526934738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2840,6 +2908,10 @@ PrefabInstance:
       propertyPath: levelControl
       value: 
       objectReference: {fileID: 704979577}
+    - target: {fileID: 787483622416122918, guid: 7c24e075f677e45738526e57c26088f7, type: 3}
+      propertyPath: Charactermodel
+      value: 
+      objectReference: {fileID: 538194520}
     - target: {fileID: 2891997429772004086, guid: 7c24e075f677e45738526e57c26088f7, type: 3}
       propertyPath: Player
       value: 
@@ -2852,9 +2924,13 @@ PrefabInstance:
       propertyPath: levelControl
       value: 
       objectReference: {fileID: 704979577}
+    - target: {fileID: 2891997429772004086, guid: 7c24e075f677e45738526e57c26088f7, type: 3}
+      propertyPath: Charactermodel
+      value: 
+      objectReference: {fileID: 538194520}
     - target: {fileID: 8294153601990121858, guid: 7c24e075f677e45738526e57c26088f7, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8294153601990121858, guid: 7c24e075f677e45738526e57c26088f7, type: 3}
       propertyPath: m_LocalPosition.x

@@ -8,14 +8,14 @@ public class Score : MonoBehaviour
     public GameObject ScoreDisplay;
     public GameObject EndScoreDisplay;
     public int Distance;
-    public bool addingDistance = false;
+    public bool addDistance = false;
 
 
     void Update()
     {
-        if (addingDistance == false)
+        if (addDistance == false)
         {
-            addingDistance = true;
+            addDistance = true;
             StartCoroutine(AddDistance());
         }
     }
@@ -25,10 +25,10 @@ public class Score : MonoBehaviour
         ScoreDisplay.GetComponent<Text>().text = "" + Distance;
         EndScoreDisplay.GetComponent<Text>().text = "" + Distance;
         yield return new WaitForSeconds(0.54f);
-        addingDistance = false;
+        addDistance = false;
         yield return new WaitForSeconds(0.54f);
         
-        addingDistance = false;
+        addDistance = false;
     }
 }
 
